@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="utf-8"></head>
+    <title>test customized Promise function</title>
+</head>
+<body>
+    <script src="./lib/Promise.js"></script>
+    <script>
+        console.log("start");
+        const p = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve(1);
+                console.log("resolve done!");
+            }, 1000);
+        });
+
+        p.then(value=>{
+            console.log("on Resolved1()", value);
+        }, error=>{
+            console.log("on Rejected1()", error);
+        }).then(value=>{
+            console.log("on Resolved2()", value);
+        }, error=>{
+            console.log("on Rejected2()", error);
+        });
+
+
+        console.log("end");
+    </script>
+</body>
+
+</html>
