@@ -1,0 +1,18 @@
+<html>
+
+<head>
+    <meta charset="utf-8"></head>
+    <title>test customized Promise function</title>
+</head>
+<body>
+    <script src="./lib/Promise.js"></script>
+    <script>
+        console.log("start");
+        const p1 = Promise.resolveDelay(11, 3000);
+        const p2 = Promise.rejectDealy(22, 3000);
+        
+        console.log("end");
+    </script>
+</body>
+
+</html>
